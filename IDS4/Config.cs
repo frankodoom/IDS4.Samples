@@ -5,6 +5,7 @@ using IdentityServer4.Test;
 
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4;
 
 namespace IDS4
 {
@@ -14,7 +15,7 @@ namespace IDS4
         {
             return new List<ApiResource>
             {
-                new ApiResource("Cloud911Api", "Customer Api for BankOfDotNet")
+                new ApiResource("Cloud911Api", "Test Api Resource")
             };
         }
 
@@ -22,29 +23,64 @@ namespace IDS4
         {
             return new List<Client>
             {
+                //Authenticate an Application 
                 new Client
                 {
                     ClientId = "client",
+
+                    // no interactive user, use the clientid/secret for authentication
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "Cloud911Api","Test Api Resourse" } //labels of the resources Identity Server is protecting
+                    AllowedScopes = { "Cloud911Api","Test Api Resource" } //labels of the resources Identity Server is protecting
                 },
 
+
+                //Authenticate a User with Username & Password
+                new Client
+                {
+                    ClientId = "android",
+
+                    // no interactive user, use the clientid/secret for authentication
+                    // used to authenticate applications
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    AllowedScopes = { "Cloud911Api","Test Api Resource" } //labels of the resources Identity Server is protecting
+                },
+
+
+
+                //Authenticate MVC App with OpenID Connect implicit flow client 
                 new Client
                 {
                     ClientId = "mvc",
-                    ClientName ="MVC Demo",
+                    ClientName = "MVC Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
-                   // RedirectUris = {"http://"}
-                    AllowedScopes = { "Cloud911Api" } //labels of the resources Identity Server is protecting
+
+                   // where to redirect to after login
+                  RedirectUris = { "http://localhost:5002/signin-oidc" },
+
+                   // where to redirect to after logout
+                  PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
+
+                   AllowedScopes = new List<string>
+                   {
+                     IdentityServerConstants.StandardScopes.OpenId,
+                     IdentityServerConstants.StandardScopes.Profile
+                   }
                 }
-            };
+           };
+
         }
 
 
+
+        //InMemory Test Users for Development, persist users in production
         public static List<TestUser> GetUsers()
         {
             return new List<TestUser>
@@ -64,5 +100,24 @@ namespace IDS4
         }
     };
         }
+
+
+
+
+        //Add Support for OpenId Scopes
+        public static IEnumerable<IdentityResource> GetIdentityResources()
+        {
+            return new List<IdentityResource>
+            {
+                //The SubjectId
+               new IdentityResources.OpenId(),
+
+               //(first name, last name etc..)
+               new IdentityResources.Profile(),
+           };
+        }
+
     }
+
+
 }

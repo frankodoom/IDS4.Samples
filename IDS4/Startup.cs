@@ -19,6 +19,7 @@ namespace IDS4
                    // .AddSigningCredential("CN=sts") adding your own certificate, key material for JWT signing you can use makecert
                    .AddDeveloperSigningCredential()
                    .AddTestUsers(Config.GetUsers())
+                   .AddInMemoryIdentityResources(Config.GetIdentityResources()) //OpenID resources/scopes
                    .AddInMemoryApiResources(Config.GetAllApiResources())//register api resources
                    .AddInMemoryClients(Config.GetClients()); //register clients
         }

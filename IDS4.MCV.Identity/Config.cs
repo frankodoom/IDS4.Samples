@@ -9,20 +9,7 @@ namespace IDS4.MCV.Identity
 {
     public class Config
     {
-        // scopes define the resources in your system
-
-        public static IEnumerable<IdentityResource> GetIdentityResources()
-
-        {
-
-            return new List<IdentityResource>
-
-            {
-                new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
-            };
-        }
-
+    
 
 
         public static IEnumerable<ApiResource> GetApiResources()
@@ -63,6 +50,21 @@ namespace IDS4.MCV.Identity
                   AllowOfflineAccess = true
                 }
             };
+        }
+
+
+        //Add Support for OpenId Scopes
+        // scopes define the resources in your system
+        public static IEnumerable<IdentityResource> GetIdentityResources()
+        {
+            return new List<IdentityResource>
+            {
+                //The SubjectId
+               new IdentityResources.OpenId(),
+
+               //(first name, last name etc..)
+               new IdentityResources.Profile(),
+           };
         }
     }
 }

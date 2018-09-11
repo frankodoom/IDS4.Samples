@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using IDS4.TestApi.Models;
+using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -35,8 +33,27 @@ namespace IDS4.MVC
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-           
 
+      
+
+            //Configure Authentication for MVC Client using OpenID
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = "Cookies";
+                options.DefaultChallengeScheme = "oidc";
+            })
+                .AddCookie("Cookies")
+                .AddOpenIdConnect("oidc", options =>
+                {
+                    options.SignInScheme = "Cookies";
+
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+
+                    options.ClientId = "mvc";
+                    options.SaveTokens = true;
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,12 +70,12 @@ namespace IDS4.MVC
             }
 
             app.UseHttpsRedirection();
+
+            //to ensure the authentication services execute on each request
+            app.UseAuthentication();
+
             app.UseStaticFiles();
-
-          
-           // app.UseCookiePolicy();
-            app.UseIdentityServer();
-
+            app.UseCookiePolicy();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

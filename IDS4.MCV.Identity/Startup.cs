@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using IDS4.MCV.Identity.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using IDS4.AspIdentity.Models;
 
 namespace IDS4.MCV.Identity
 {
@@ -36,13 +38,8 @@ namespace IDS4.MCV.Identity
 
             services.AddDbContext<ApplicationDbContext>(options =>
                      options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            //services.AddDefaultIdentity<IdentityUser>()
-            //        .AddEntityFrameworkStores<ApplicationDbContext>();
-
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                     .AddEntityFrameworkStores<ApplicationDbContext>()
-                     .AddDefaultTokenProviders();
+            services.AddDefaultIdentity<IdentityUser>()
+                           .AddEntityFrameworkStores<ApplicationDbContext>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -75,7 +72,6 @@ namespace IDS4.MCV.Identity
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseAuthentication();
             app.UseIdentityServer();
 
             app.UseMvc(routes =>

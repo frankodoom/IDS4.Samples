@@ -14,7 +14,7 @@ namespace IDS4.MVC
         {
             return new List<ApiResource>
             {
-                new ApiResource("Cloud911Api", "Customer Api for BankOfDotNet")
+                new ApiResource("Cloud911Api")
             };
         }
 
@@ -30,7 +30,7 @@ namespace IDS4.MVC
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "Cloud911Api","Test Api Resourse" } //labels of the resources Identity Server is protecting
+                    AllowedScopes = { "Cloud911Api"} //labels of the resources Identity Server is protecting
                 },
 
                 new Client
@@ -39,7 +39,7 @@ namespace IDS4.MVC
                     ClientName ="MVC Demo",
                     AllowedGrantTypes = GrantTypes.Implicit,
                    // RedirectUris = {"http://"}
-                    AllowedScopes = { "Cloud911Api" } //labels of the resources Identity Server is protecting
+                    AllowedScopes = { "Cloud911Api"} //labels of the resources Identity Server is protecting
                 }
             };
         }

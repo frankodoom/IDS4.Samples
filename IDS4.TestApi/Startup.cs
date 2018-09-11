@@ -30,7 +30,7 @@ namespace IDS4.TestApi
             services.AddAuthentication("Bearer")
                .AddIdentityServerAuthentication(option =>
                {
-                   option.Authority = "http://localhost:53993";
+                   option.Authority = "http://localhost:5000";
                    option.RequireHttpsMetadata = false;
                    option.ApiName = "Cloud911Api";
                });
@@ -49,7 +49,9 @@ namespace IDS4.TestApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
             app.UseMvc();
+            
         }
     }
 }

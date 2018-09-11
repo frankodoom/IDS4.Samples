@@ -25,6 +25,7 @@ namespace IDS4.Client
             //Grab a bearer token
             var tokenClient = new TokenClient(disco.TokenEndpoint, "client", "secret");
             var tokenResponse = await tokenClient.RequestClientCredentialsAsync("Cloud911Api");
+
            // var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync("Cloud911Api", "password", "bob");
 
 
