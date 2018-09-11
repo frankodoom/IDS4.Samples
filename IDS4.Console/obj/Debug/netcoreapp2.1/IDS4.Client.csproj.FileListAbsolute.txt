@@ -1,0 +1,22 @@
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.deps.json
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.runtimeconfig.json
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.runtimeconfig.dev.json
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.dll
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.csprojAssemblyReference.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.csproj.CoreCompileInputs.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.AssemblyInfoInputs.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.AssemblyInfo.cs
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.pdb
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.dll
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.pdb
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.deps.json
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.runtimeconfig.json
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.runtimeconfig.dev.json
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.dll
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\bin\Debug\netcoreapp2.1\IDS4.Client.pdb
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.csprojAssemblyReference.cache
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.csproj.CoreCompileInputs.cache
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.AssemblyInfoInputs.cache
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.AssemblyInfo.cs
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.dll
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Client.pdb

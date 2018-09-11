@@ -1,0 +1,14 @@
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\bin\Debug\netcoreapp2.1\IDS4.WebApi.deps.json
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\bin\Debug\netcoreapp2.1\IDS4.WebApi.runtimeconfig.json
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\bin\Debug\netcoreapp2.1\IDS4.WebApi.runtimeconfig.dev.json
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\bin\Debug\netcoreapp2.1\IDS4.WebApi.dll
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\bin\Debug\netcoreapp2.1\IDS4.WebApi.pdb
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.csprojAssemblyReference.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.AssemblyInfoInputs.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.AssemblyInfo.cs
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.dll
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.pdb
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.RazorAssemblyInfo.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.RazorAssemblyInfo.cs
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.TestApi\obj\Debug\netcoreapp2.1\IDS4.WebApi.RazorTargetAssemblyInfo.cache

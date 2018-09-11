@@ -1,0 +1,14 @@
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\bin\Debug\netcoreapp2.1\Cloud911.Api.deps.json
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\bin\Debug\netcoreapp2.1\Cloud911.Api.runtimeconfig.json
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\bin\Debug\netcoreapp2.1\Cloud911.Api.runtimeconfig.dev.json
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\bin\Debug\netcoreapp2.1\Cloud911.Api.dll
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\bin\Debug\netcoreapp2.1\Cloud911.Api.pdb
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.csprojAssemblyReference.cache
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.csproj.CoreCompileInputs.cache
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.RazorAssemblyInfo.cache
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.RazorAssemblyInfo.cs
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.AssemblyInfoInputs.cache
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.AssemblyInfo.cs
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.RazorTargetAssemblyInfo.cache
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.dll
+C:\Users\Devadmin\source\repos\Heimdall\WebApiTest\obj\Debug\netcoreapp2.1\Cloud911.Api.pdb

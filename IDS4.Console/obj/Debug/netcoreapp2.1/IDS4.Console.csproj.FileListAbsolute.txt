@@ -1,0 +1,3 @@
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Console.csproj.CoreCompileInputs.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Console.AssemblyInfoInputs.cache
+C:\Users\Devadmin\source\repos\Heimdall\IDS4.Console\obj\Debug\netcoreapp2.1\IDS4.Console.AssemblyInfo.cs
