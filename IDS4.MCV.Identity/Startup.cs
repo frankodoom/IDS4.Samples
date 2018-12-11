@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using IDS4.MCV.Identity.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using IDS4.AspIdentity.Models;
+using System.Reflection;
+using IDS4.AspIdentity;
+using IdentityServer4;
 
 namespace IDS4.MCV.Identity
 {
     public class Startup
     {
+        //https://www.scottbrady91.com/Identity-Server/Getting-Started-with-IdentityServer-4        //https://www.ebenmonney.com/configure-identityserver-to-use-entityframework-for-storage/
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,30 +23,50 @@ namespace IDS4.MCV.Identity
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            var connectionstring = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Test.IdentityServer4.EntityFramework;Integrated Security=True";
+            var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+            //services.AddTransient<IDatabaseInitializer, IdentityServerDbInitializer>();
+            services.AddDbContext<ApplicationDbContext>(builder =>
+           builder.UseSqlServer(connectionstring, sqlOptions => sqlOptions.MigrationsAssembly(migrationsAssembly)));
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                           .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc();
 
-            // configure identity server with in-memory stores, keys, clients and scopes
+            //Identity Server Builder Configuration
             services.AddIdentityServer()
-                .AddDeveloperSigningCredential()
-                .AddInMemoryPersistedGrants()
-                .AddInMemoryIdentityResources(Config.GetIdentityResources())
-                .AddInMemoryApiResources(Config.GetApiResources())
-                .AddInMemoryClients(Config.GetClients())
-                .AddAspNetIdentity<IdentityUser>();
+
+             //.AddSigningCredential("CN=sts") adding your own certificate, key material for JWT signing you can use makecert
+             .AddDeveloperSigningCredential()
+
+             //Persisiting Identity Server 4 Stores Configurations
+             //add persisted grant stores
+             .AddConfigurationStore(options =>
+             {
+                 options.ConfigureDbContext = builder =>
+                  builder.UseSqlServer(connectionstring, sql =>
+                                       sql.MigrationsAssembly(migrationsAssembly));
+             })
+             //add client and scope stores
+             .AddOperationalStore(options =>
+             {
+                 options.ConfigureDbContext = builder =>
+                   builder.UseSqlServer(connectionstring, sql =>
+                                   sql.MigrationsAssembly(migrationsAssembly));
+
+                 //this enables automatic token cleanup. this is optional. 
+                 options.EnableTokenCleanup = true;
+                 options.TokenCleanupInterval = 30;
+             })
+
+            //Asp.Net Core Identity Configuration
+            .AddAspNetIdentity<IdentityUser>();
+
+            //.AddProfileService<ProfileService>();
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

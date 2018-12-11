@@ -1,0 +1,7 @@
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Client.MVC\obj\Debug\netcoreapp2.1\IDS4.Client.MVC.csprojAssemblyReference.cache
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Client.MVC\obj\Debug\netcoreapp2.1\IDS4.Client.MVC.csproj.CoreCompileInputs.cache
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Client.MVC\obj\Debug\netcoreapp2.1\IDS4.Client.MVC.RazorAssemblyInfo.cache
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Client.MVC\obj\Debug\netcoreapp2.1\IDS4.Client.MVC.RazorAssemblyInfo.cs
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Client.MVC\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Client.MVC\obj\Debug\netcoreapp2.1\IDS4.Client.MVC.AssemblyInfoInputs.cache
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.Client.MVC\obj\Debug\netcoreapp2.1\IDS4.Client.MVC.AssemblyInfo.cs

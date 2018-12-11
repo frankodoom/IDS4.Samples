@@ -15,7 +15,9 @@ namespace IDS4
         {
             return new List<ApiResource>
             {
-                new ApiResource("Cloud911Api", "Test Api Resource")
+                new ApiResource("Cloud911Api", "Test Api Resource"),
+                new ApiResource("Actio.Activities","Actio MicroService")
+
             };
         }
 
@@ -114,6 +116,8 @@ namespace IDS4
 
                //(first name, last name etc..)
                new IdentityResources.Profile(),
+
+
            };
         }
 

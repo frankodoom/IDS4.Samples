@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS4.Xamarin.Android", "IDS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS4", "IDS4\IDS4.csproj", "{123366EA-4160-43CB-9116-178BCB19EDCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS4.Client.MVC", "IDS4.Client.MVC\IDS4.Client.MVC.csproj", "{E162FE73-BF47-453E-939A-AF9CBA4D8194}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{123366EA-4160-43CB-9116-178BCB19EDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{123366EA-4160-43CB-9116-178BCB19EDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{123366EA-4160-43CB-9116-178BCB19EDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E162FE73-BF47-453E-939A-AF9CBA4D8194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E162FE73-BF47-453E-939A-AF9CBA4D8194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E162FE73-BF47-453E-939A-AF9CBA4D8194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E162FE73-BF47-453E-939A-AF9CBA4D8194}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

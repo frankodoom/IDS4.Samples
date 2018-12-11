@@ -4,15 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using IdentityServer4;
 using IdentityServer4.Models;
+using IdentityServer4.Test;
 
 namespace IDS4.MCV.Identity
 {
     public class Config
     {
-    
-
-
-        public static IEnumerable<ApiResource> GetApiResources()
+        public static IEnumerable<ApiResource> GetAllApiResources()
         {
             return new List<ApiResource>
             {
@@ -24,47 +22,54 @@ namespace IDS4.MCV.Identity
         {
             return new List<Client>
             {
-                new Client             
+                new Client
                 {
-
-                   ClientId = "mvc",
-                   ClientName = "MVC Client",
-                   AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
-
-                   RequireConsent = false,
-
-                  ClientSecrets =
-                  {
+                    ClientId = "client",
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    ClientSecrets =
+                    {
                         new Secret("secret".Sha256())
-                  },
-
-                  RedirectUris =           { "http://localhost:5002/signin-oidc" },
-                  PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
-
-                  AllowedScopes =
-                  {
-                     IdentityServerConstants.StandardScopes.OpenId,
-                     IdentityServerConstants.StandardScopes.Profile,
-                     "Cloud911Api"
-                  },
-                  AllowOfflineAccess = true
+                    },
+                    //labels of the resources Identity Server is protecting
+                    AllowedScopes = { "Cloud911Api","Cloud911 Test Api " }
+                },
+                new Client
+                {
+                    ClientId = "mvc",
+                    ClientName ="MVC Demo",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                   //RedirectUris = {"http://"}
+                   //labels of the resources Identity Server is protecting
+                   AllowedScopes = {"cloud911"}
                 }
             };
         }
 
-
-        //Add Support for OpenId Scopes
-        // scopes define the resources in your system
-        public static IEnumerable<IdentityResource> GetIdentityResources()
+        //InMemory User test
+        //TODO remove in production
+        public static List<TestUser> GetUsers()
         {
-            return new List<IdentityResource>
-            {
-                //The SubjectId
-               new IdentityResources.OpenId(),
 
-               //(first name, last name etc..)
-               new IdentityResources.Profile(),
+            return new List<TestUser>
+           {
+             new TestUser
+        {
+            SubjectId = "1",
+            Username = "alice",
+            Password = "password"
+        },
+             new TestUser
+        {
+            SubjectId = "2",
+            Username = "bob",
+            Password = "password",
+
+        }
            };
         }
     }
+
+    
+            
 }
+

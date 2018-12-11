@@ -5,21 +5,15 @@ C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\bin\Debug\netcoreap
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\bin\Debug\netcoreapp2.1\IDS4.AspIdentity.pdb
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\bin\Debug\netcoreapp2.1\IDS4.AspIdentity.Views.dll
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\bin\Debug\netcoreapp2.1\IDS4.AspIdentity.Views.pdb
-C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.csprojAssemblyReference.cache
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.csproj.CoreCompileInputs.cache
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.RazorAssemblyInfo.cache
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.RazorAssemblyInfo.cs
-C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.AssemblyInfoInputs.cache
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.AssemblyInfo.cs
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.TagHelpers.input.cache
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.TagHelpers.output.cache
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.RazorCoreGenerate.cache
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
-C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
-C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
-C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
-C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
@@ -33,3 +27,5 @@ C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreap
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.dll
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.pdb
 C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.csproj.CopyComplete
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Devadmin\source\repos\IDS4 Setups\IDS4.MCV.Identity\obj\Debug\netcoreapp2.1\IDS4.AspIdentity.csprojAssemblyReference.cache

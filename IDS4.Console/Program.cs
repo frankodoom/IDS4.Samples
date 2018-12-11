@@ -15,6 +15,7 @@ namespace IDS4.Client
         private static async Task MainAsync()
         {
             //discover all the endpoints using metadata of identity server
+            //var disco = await DiscoveryClient.GetAsync("https://heimdall-auth.azurewebsites.net");
             var disco = await DiscoveryClient.GetAsync("https://heimdall-auth.azurewebsites.net");
             if (disco.IsError)
             {
