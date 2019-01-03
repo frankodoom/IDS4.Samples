@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace IDS4.AspIdentity.Models
 {
-    public class ApplicationUser: IdentityUser
+    // Add profile data for application users by adding properties to the ApplicationUser class
+    public class ApplicationUser : IdentityUser
     {
+
     }
 }

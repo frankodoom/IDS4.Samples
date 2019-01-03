@@ -14,32 +14,35 @@ namespace IDS4.Client
 
         private static async Task MainAsync()
         {
-            //discover all the endpoints using metadata of identity server
-            //var disco = await DiscoveryClient.GetAsync("https://heimdall-auth.azurewebsites.net");
-            var disco = await DiscoveryClient.GetAsync("https://heimdall-auth.azurewebsites.net");
-            if (disco.IsError)
-            {
-                Console.WriteLine(disco.Error);
-                return;
-            }
+            //////discover all the endpoints using metadata of identity server
+            ////var disco = await DiscoveryClient.GetAsync("https://heimdall-auth.azurewebsites.net");
+            //var disco = await DiscoveryClient.GetAsync("http://localhost:61011");
+            ////var discoveryClient = new DiscoveryClient("Policy");
+            ////discoveryClient.Policy = new DiscoveryPolicy { RequireHttps = false };
+            //if (disco.IsError)
+            //{
+            //    Console.WriteLine(disco.Error);
+            //    return;
+            //}
 
-            //Grab a bearer token
-            var tokenClient = new TokenClient(disco.TokenEndpoint, "client", "secret");
-            var tokenResponse = await tokenClient.RequestClientCredentialsAsync("Cloud911Api");
+            ////Grab a bearer token
+            //var tokenClient = new TokenClient(disco.TokenEndpoint, "client", "secret");
 
-           // var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync("Cloud911Api", "password", "bob");
+            ////var tokenResponse = await tokenClient.RequestClientCredentialsAsync("Cloud911Api");
+            //var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync("f.odoom@accedegh.net", "Secure@124", "Cloud911Api");
+            //Console.WriteLine(tokenResponse.AccessToken);
 
+            //if (tokenResponse.IsError)
+            //{
+            //    Console.WriteLine(tokenResponse.Error);
+            //    Console.ReadLine();
+            //    return;
+            //}
 
-            if (tokenResponse.IsError)
-            {
-                Console.WriteLine(tokenResponse.Error);
-                return;
-            }
+            //Console.WriteLine(tokenResponse.Json);
+            //Console.WriteLine("\n\n");
 
-            Console.WriteLine(tokenResponse.Json);
-            Console.WriteLine("\n\n");
-
-            //Consume our Customer API
+           //Consume our Customer API
             //var client = new HttpClient();
             //client.SetBearerToken(tokenResponse.AccessToken);
 
@@ -66,6 +69,21 @@ namespace IDS4.Client
             //    var content = await getCustomerResponse.Content.ReadAsStringAsync();
             //    Console.WriteLine(JArray.Parse(content));
             //}
+
+            var client = new HttpClient();
+            var disco = await client.GetDiscoveryDocumentAsync("http://localhost:61011");
+
+            var tokenResponse = await client.RequestPasswordTokenAsync(new PasswordTokenRequest { Address = disco.TokenEndpoint, GrantType = IdentityModel.OidcConstants.GrantTypes.Password, ClientId = "client", ClientSecret = "secret", UserName = "f.odoom@accdegh.net", Password = "Secure@124", Parameters = { { "scope", "Cloud911Api" } } });
+            if (tokenResponse.IsError)
+            {
+                Console.WriteLine(tokenResponse.Error);
+                return;
+            }
+            var token = tokenResponse.AccessToken;
+            var iUserTOken = tokenResponse.IdentityToken;
+            Console.WriteLine(token);
+            Console.WriteLine(".........................................................................................................................................................");
+            Console.WriteLine(iUserTOken);
 
             Console.ReadLine();
 

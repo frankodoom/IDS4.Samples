@@ -25,7 +25,7 @@ namespace IDS4.MCV.Identity
                 new Client
                 {
                     ClientId = "client",
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())
@@ -37,7 +37,7 @@ namespace IDS4.MCV.Identity
                 {
                     ClientId = "mvc",
                     ClientName ="MVC Demo",
-                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                    //RedirectUris = {"http://"}
                    //labels of the resources Identity Server is protecting
                    AllowedScopes = {"cloud911"}
@@ -45,9 +45,26 @@ namespace IDS4.MCV.Identity
             };
         }
 
-        //InMemory User test
-        //TODO remove in production
-        public static List<TestUser> GetUsers()
+
+        public static IEnumerable<IdentityResource> GetIdentityResources()
+        {
+            return new List<IdentityResource> {
+            new IdentityResources.OpenId(),
+            new IdentityResources.Profile(),
+            new IdentityResources.Email(),
+            new IdentityResource {
+                Name = "role",
+                UserClaims = new List<string> {"role"},
+                
+                
+            }
+        };
+        }
+
+
+            //InMemory User test
+            //TODO remove in production
+            public static List<TestUser> GetUsers()
         {
 
             return new List<TestUser>
@@ -57,6 +74,7 @@ namespace IDS4.MCV.Identity
             SubjectId = "1",
             Username = "alice",
             Password = "password"
+            
         },
              new TestUser
         {

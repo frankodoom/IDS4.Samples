@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using IDS4.TestApi.Models;
+using System.Reflection;
+using IDS4.WebApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -25,19 +26,27 @@ namespace IDS4.TestApi
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {         
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                         .AddEntityFrameworkStores<ApplicaionDbContext>()
+                         .AddDefaultTokenProviders();
+
             //Configure Authentication
             services.AddAuthentication("Bearer")
                .AddIdentityServerAuthentication(option =>
                {
-                   option.Authority = "http://localhost:5000";
+                   option.Authority = "http://localhost:61011";
                    option.RequireHttpsMetadata = false;
                    option.ApiName = "Cloud911Api";
+                   option.ApiSecret = "secret";
                });
 
             //Configure Db
-            services.AddDbContext<ApplicaionDbContext>(options =>
-                                                      options.UseInMemoryDatabase("BankDb"));
+            var connectionstring = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=IDS4;Integrated Security=True";
+            var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+            services.AddDbContext<ApplicaionDbContext>(builder =>
+            builder.UseSqlServer(connectionstring, sqlOptions => sqlOptions.MigrationsAssembly(migrationsAssembly)));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

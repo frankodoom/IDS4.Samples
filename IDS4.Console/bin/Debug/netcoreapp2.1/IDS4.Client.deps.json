@@ -53,7 +53,7 @@
     "IdentityModel/3.9.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rvKF9dc5JfYG5WXYEE5jrp2Kh75E0DqZzz7X5HK3nyG+rFvoZDqb4MWrpA25OmbpcdQ8daAoxT8E43Y+5rWwuA==",
+      "sha512": "sha512-a0geQ3AeCBiOSv6iIfTAmfQAG4uw2pQnS4fwJVzAowKeu8ZjcQRlbLHwf+h7fIFwdcwNZH3CashfUP0YhNLUxg==",
       "path": "identitymodel/3.9.0",
       "hashPath": "identitymodel.3.9.0.nupkg.sha512"
     },
@@ -67,7 +67,7 @@
     "System.Text.Encodings.Web/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JF+wDdfFiRl3rz3dPMfR6aR568AW2J5CUMmhSflgHDz4zbVK4/00ax8UHnHyEMvblPewgNugjuA4oyoL8Pex2g==",
+      "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
     }

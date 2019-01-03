@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Service\Provider\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
 

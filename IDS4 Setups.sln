@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDS4", "IDS4\IDS4.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDS4.Client.MVC", "IDS4.Client.MVC\IDS4.Client.MVC.csproj", "{E162FE73-BF47-453E-939A-AF9CBA4D8194}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heimdall.Identity", "Heimdall.Identity\Heimdall.Identity.csproj", "{2CDCA39D-90EB-47B5-B74D-60956FA79810}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{E162FE73-BF47-453E-939A-AF9CBA4D8194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E162FE73-BF47-453E-939A-AF9CBA4D8194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E162FE73-BF47-453E-939A-AF9CBA4D8194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CDCA39D-90EB-47B5-B74D-60956FA79810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CDCA39D-90EB-47B5-B74D-60956FA79810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CDCA39D-90EB-47B5-B74D-60956FA79810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDCA39D-90EB-47B5-B74D-60956FA79810}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
